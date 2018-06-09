@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+    <title>Music</title>
+    <style>
+        .title{
+            display:inline-block;
+            font-weight: 700;
+            font-family: Microsoft YaHei;
+            color: #454545;
+            font-size:2rem;
+            margin-bottom:5px;
+        }
+        .music_box{
+            float: left;
+            display: flex;
+            flex-direction: row;
+            width: calc((100% - 40px) / 3);
+            line-height: 36px;
+            cursor: pointer;
+            height: 70px;
+            background-color: #f4efef;
+            align-items:center;
+            color: #666;
+            overflow: hidden;
+        }
+        .music_box:nth-child(-n+3) {
+            margin-bottom: 10px;
+        }
+        .music_box:not(:nth-child(3n)) {
+            margin-right: 20px;
+        }
+        .music_img{
+            width:70px;
+            height:70px;
+            margin-right: 10px;
+
+        }
+        .music_switch{
+            margin-left: 20%;
+            font-size:2em;
+        }
+
+        .music_control{
+            padding-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            height: 44px;
+            background-color: #fff;
+            box-sizing: border-box;
+            color: #242424;
+            width: 100%;
+
+        }
+        .music_title{
+            width: 100%;
+            text-align:center;
+            color:gray;
+        }
+        .control{
+            width:100%;
+
+        }
+
+
+    </style>
+</head>
+<body style="width:100%;">
+    <div>
+        <div class="title">
+            <span class="glyphicon glyphicon-headphones"></span>
+            音乐专区
+        </div>
+        <div class="music_recommend">
+            <div class="music_box">
+                <div>
+                    <img src="../static/image/photo1.jpg" alt="music photo" class="music_img">
+                </div>
+                <div style="display:inherit;flex-direction: column">
+                    <p style="position: relative;top: 10px;font-size: 1.2em;">song name</p>
+                    <p>author name</p>
+                </div>
+
+                <span class="glyphicon glyphicon-play-circle music_switch"></span>
+
+            </div>
+            <div class="music_box">
+                <div>
+                    <img src="../static/image/photo1.jpg" alt="music photo" class="music_img">
+                </div>
+                <div style="display:inherit;flex-direction: column">
+                    <p style="position: relative;top: 10px;font-size: 1.2em;">song name2</p>
+                    <p>author name2</p>
+                </div>
+
+                <span class="glyphicon glyphicon-play-circle music_switch"></span>
+
+            </div>
+            <div class="music_box">
+                <div>
+                    <img src="../static/image/photo1.jpg" alt="music photo" class="music_img">
+                </div>
+                <div style="display:inherit;flex-direction: column">
+                    <p style="position: relative;top: 10px;font-size: 1.2em;">song name</p>
+                    <p>author name</p>
+                </div>
+
+                <span class="glyphicon glyphicon-play-circle music_switch"></span>
+            </div>
+            <div class="music_box">
+                <div>
+                    <img src="../static/image/photo1.jpg" alt="music photo" class="music_img">
+                </div>
+                <div style="display:inherit;flex-direction: column">
+                    <p style="position: relative;top: 10px;font-size: 1.2em;">song name</p>
+                    <p>author name</p>
+                </div>
+
+                <span class="glyphicon glyphicon-play-circle music_switch"></span>
+            </div>
+            <div class="music_box">
+                <div>
+                    <img src="../static/image/photo1.jpg" alt="music photo" class="music_img">
+                </div>
+                <div style="display:inherit;flex-direction: column">
+                    <p style="position: relative;top: 10px;font-size: 1.2em;">song name</p>
+                    <p>author name</p>
+                </div>
+
+                <span class="glyphicon glyphicon-play-circle music_switch"></span>
+            </div>
+            <div class="music_box">
+                <div>
+                    <img src="../static/image/photo1.jpg" alt="music photo" class="music_img">
+                </div>
+                <div style="display:inherit;flex-direction: column">
+                    <p style="position: relative;top: 10px;font-size: 1.2em;">song name</p>
+                    <p>author name</p>
+                </div>
+
+                <span class="glyphicon glyphicon-play-circle music_switch"></span>
+            </div>
+
+        </div>
+
+        <div class="music_control">
+            <div class="music_title">未知 未知</div>
+            <audio src="#" controls="controls" class="control"></audio>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.js"></script>
+    <script>
+        $(".music_box").click(function(){
+            var titleArr = $(this).find("p");
+            $(".music_title").html(titleArr[0].innerText+"-"+titleArr[1].innerText);
+            $("audio").attr("src",url);
+        })
+    </script>
+
+</body>
+</html>
